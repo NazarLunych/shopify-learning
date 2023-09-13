@@ -1,0 +1,30 @@
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js" defer></script>
+{{ 'component-product-card.css' | asset_url | stylesheet_tag }}
+
+<div class="product-card {{productCardClass}}">
+  <img
+    src="{{ image | image_url }}"
+    alt="{{ image.alt }}"
+    class="product-image"
+    width="200"
+    height="200"
+    loading="eager"
+  >
+  {% for variant in options %}
+    {% if variant == 'Color' %}
+      <div class="colors-container">
+        <p class="text">Colors</p>
+        <div class="inputs-wrapper">
+          {% for color in variants %}
+            <div class="input-container" style="background-color: {{color.title}}">
+              <input type="radio" id="{{color.id}}" value="{{color.id}}">
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <p class="text description">{{ description }}</p>
+  <p class="cost">{{ price | money }}</p>
+</div>

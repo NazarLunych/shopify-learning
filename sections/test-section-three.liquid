@@ -1,0 +1,59 @@
+<script src="{{ 'third-section-collections.js' | asset_url }}" defer="defer"></script>
+{{ 'test-section-three.css' | asset_url | stylesheet_tag }}
+
+<section class="test-section-three">
+  <div class="content-wrapper">
+    <div class="buttons-wrapper">
+      {% for block in section.blocks %}
+        {% assign collection = block.settings.collection %}
+        {% assign products = collection.products %}
+        {% assign index = forloop.index %}
+
+        <div id="collection-tabs-id">
+          <button class="button button--tertiary" id="element{{index}}" onclick="onClick(event)">
+            {{ collection.title }}
+          </button>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="products">
+      {% for block in section.blocks %}
+        {% assign collection = block.settings.collection %}
+        {% assign products = collection.products %}
+        {% assign index = forloop.index %}
+
+        <div id="element{{index}}" class="products-wrapper">
+          <div class="products-wrapper_overflow">
+            {% for product in products %}
+              <div class="product">
+                {% render 'product-card',
+                  image: product.featured_image,
+                  description: product.description,
+                  options: product.options,
+                  variants: product.variants,
+                  price: product.price,
+                  productCardClass: 'product-card_color'
+                %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Third section Collection",
+  "blocks": [
+    {
+      "name": "Collection block",
+      "type": "collection_block",
+      "settings": [{ "type": "collection", "id": "collection", "label": "Collection" }]
+    }
+  ],
+  "presets": [{ "name": "Third section Collection" }]
+}
+{% endschema %}

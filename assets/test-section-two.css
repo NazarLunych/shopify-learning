@@ -1,0 +1,48 @@
+.test-section-two {
+  background: linear-gradient(to bottom, #f5f6f8 50%, transparent 50%);
+  padding: 24px;
+}
+
+.swiper-container {
+  max-width: 1320px;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+}
+
+.swiper-slide:nth-child(2n) > .product-card_color {
+  background-color: #ffe4bd;
+}
+
+.swiper-slide:nth-child(3n) > .product-card_color {
+  background-color: #d9abfd;
+}
+
+.swiper-slide:nth-child(4n) > .product-card_color {
+  background-color: #fdf0ab;
+}
+
+@media screen and (max-width: 767px) {
+  .test-section-two {
+    background: transparent;
+  }
+
+  .product-card {
+    padding-top: 43px;
+  }
+
+  .colors-container {
+    margin-top: -39px;
+  }
+
+  .description {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
