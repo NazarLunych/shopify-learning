@@ -1,150 +1,5 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -181,6 +36,7 @@
         "column2",
         "column3"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -191,20 +47,137 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "background-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "765acbb8-c09a-4caa-8e96-448f47f4dfa6": {
+      "type": "test-section-one",
+      "blocks": {
+        "aa7d44b1-19e2-417c-89ee-38d061116d6e": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "clothing-shoes"
+          }
+        },
+        "33e77108-7562-4e1a-bb11-954da9d5039a": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "home-living"
+          }
+        },
+        "e50603bb-71ad-415a-9055-e4eccf9fb7c6": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "art-collectibles"
+          }
+        }
+      },
+      "block_order": [
+        "aa7d44b1-19e2-417c-89ee-38d061116d6e",
+        "33e77108-7562-4e1a-bb11-954da9d5039a",
+        "e50603bb-71ad-415a-9055-e4eccf9fb7c6"
+      ],
+      "settings": {
+        "text": ""
+      }
+    },
+    "9a68ef5a-56bf-426e-8488-b05579f5333f": {
+      "type": "test-section-two",
+      "blocks": {
+        "253576ed-6f60-4446-a463-a286bd55956f": {
+          "type": "products_block",
+          "settings": {
+            "product": "test-1"
+          }
+        },
+        "d90f7fd6-6f3b-4ac3-87c7-e916b982df24": {
+          "type": "products_block",
+          "settings": {
+            "product": "test-2"
+          }
+        },
+        "d7f5453b-3fe8-4b28-a19a-5731968263e4": {
+          "type": "products_block",
+          "settings": {
+            "product": "test-3"
+          }
+        },
+        "6e706be5-b589-4095-a294-63d76dd1acab": {
+          "type": "products_block",
+          "settings": {
+            "product": "test-4"
+          }
+        }
+      },
+      "block_order": [
+        "253576ed-6f60-4446-a463-a286bd55956f",
+        "d90f7fd6-6f3b-4ac3-87c7-e916b982df24",
+        "d7f5453b-3fe8-4b28-a19a-5731968263e4",
+        "6e706be5-b589-4095-a294-63d76dd1acab"
+      ],
+      "settings": {
+      }
+    },
+    "4f4cc2a3-5bf2-4a79-9083-5bcf6cf64566": {
+      "type": "test-section-three",
+      "blocks": {
+        "bb5ad64a-7525-4262-9e07-db623edfd848": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "modern-farmhouse"
+          }
+        },
+        "ecbbfcf2-417a-42f8-a3a6-f57601c736b6": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "eclectic-decor"
+          }
+        },
+        "68550a74-5808-4c29-8e57-8f7ac46c8e7e": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "polka-boho-decor"
+          }
+        },
+        "f0fe5f1f-b962-4b99-b775-ffe643a62d18": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "minimalist-style"
+          }
+        },
+        "5029bebc-edad-4277-aa17-e3af5752f560": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "anniversary-gift"
+          }
+        },
+        "3791c96c-2b47-4b3a-9acd-a5af84d6a4b8": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "wedding-gifts"
+          }
+        }
+      },
+      "block_order": [
+        "bb5ad64a-7525-4262-9e07-db623edfd848",
+        "ecbbfcf2-417a-42f8-a3a6-f57601c736b6",
+        "68550a74-5808-4c29-8e57-8f7ac46c8e7e",
+        "f0fe5f1f-b962-4b99-b775-ffe643a62d18",
+        "5029bebc-edad-4277-aa17-e3af5752f560",
+        "3791c96c-2b47-4b3a-9acd-a5af84d6a4b8"
+      ],
+      "settings": {
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "multicolumn",
+    "765acbb8-c09a-4caa-8e96-448f47f4dfa6",
+    "9a68ef5a-56bf-426e-8488-b05579f5333f",
+    "4f4cc2a3-5bf2-4a79-9083-5bcf6cf64566"
   ]
 }
