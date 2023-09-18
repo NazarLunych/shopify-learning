@@ -1,23 +1,29 @@
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js" defer></script>
 {{ 'component-product-card.css' | asset_url | stylesheet_tag }}
 
-<div class="product-card {{productCardClass}}">
-  <img
-    src="{{ image | image_url }}"
-    alt="{{ image.alt }}"
-    class="product-image"
-    width="200"
-    height="200"
-    loading="eager"
-  >
-  {% for variant in options %}
-    {% if variant == 'Color' %}
-      <div class="colors-container">
-        <p class="text">Colors</p>
-        <div class="inputs-wrapper">
-          {% for color in variants %}
-            <div class="input-container" style="background-color: {{color.title}}">
-              <input type="radio" id="{{color.id}}" value="{{color.id}}">
+<div class="product-card {{productCardClass}}" style="background-color: {{color}}">
+  {% assign image = product.featured_image %}
+  {% assign url = product.url %}
+  {% assign price = product.price %}
+  {% assign compareAtPrice = product.compare_at_price %}
+
+  <a href="{{url}}" class="product-card__link">
+    <img
+      src="{{ image | image_url }}"
+      alt="{{ image.alt }}"
+      class="product-card__image"
+      width="200"
+      height="200"
+      loading="eager"
+    >
+  </a>
+  {% for option in product.options %}
+    {% if option == 'Color' %}
+      <div class="product-card__colors-container">
+        <p class="product-card__text">Colors</p>
+        <div class="product-card__inputs-wrapper">
+          {% for variant in product.variants %}
+            <div class="product-card__input" style="background-color: {{variant.title}}">
+              <input type="radio" id="{{variant.id}}" value="{{color.id}}">
             </div>
           {% endfor %}
         </div>
@@ -25,6 +31,14 @@
     {% endif %}
   {% endfor %}
 
-  <p class="text description">{{ description }}</p>
-  <p class="cost">{{ price | money }}</p>
+  <a href="{{url}}" class="product-card__link">
+    <p class="product-card__text product-card__description">{{ product.description }}</p>
+
+    <div class="product-card__price-container">
+      <p class="product-card__price">{{ price | money }}</p>
+      {% if compareAtPrice and price != compareAtPrice %}
+        <p class="product-card__compare-price">{{ compareAtPrice | money }}</p>
+      {% endif %}
+    </div>
+  </a>
 </div>

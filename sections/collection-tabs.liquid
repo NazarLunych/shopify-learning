@@ -1,0 +1,64 @@
+<script src="{{ 'collection-tabs.js' | asset_url }}" defer="defer"></script>
+{{ 'section-collection-tabs.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %}
+  <section class="collection-tabs">
+    <div class="collection-tabs__container">
+      <div class="collection-tabs__container-buttons js-collection-tabs__container-buttons">
+        {% for block in section.blocks %}
+          {% assign collection = block.settings.collection %}
+          {% assign products = collection.products %}
+          {% assign index = forloop.index %}
+
+          {% if products.length > 0 %}
+            <div class="js-collection-tabs-button__container">
+              <button
+                class="collection-tabs__button button button--tertiary"
+                id="element{{index}}"
+              >
+                {{ collection.title }}
+              </button>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="collection-tabs__products">
+        {% for block in section.blocks %}
+          {% assign collection = block.settings.collection %}
+          {% assign products = collection.products %}
+          {% assign index = forloop.index %}
+
+          {% if products.length > 0 %}
+            <div
+              id="element{{index}}"
+              class="collection-tabs__products-container js-collection-tabs__products-container"
+            >
+              <div class="collection-tabs__overflow-fix">
+                {% for product in products %}
+                  <div class="collection-tabs__product">
+                    {% render 'product-card', product: product, productCardClass: 'collection-tabs__product_color' %}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Collection tabs section",
+  "blocks": [
+    {
+      "name": "Collection block",
+      "type": "collection_block",
+      "settings": [{ "type": "collection", "id": "collection", "label": "Collection" }]
+    }
+  ],
+  "presets": [{ "name": "Collection tabs section" }]
+}
+{% endschema %}

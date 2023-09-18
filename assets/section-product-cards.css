@@ -1,0 +1,36 @@
+.product-cards {
+  background: linear-gradient(to bottom, #f5f6f8 50%, transparent 50%);
+  padding: 24px;
+}
+
+.swiper {
+  max-width: 1320px;
+}
+
+.swiper .swiper-slide {
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .product-cards {
+    background: transparent;
+  }
+}
+
+.product-cards .swiper-pagination {
+  position: initial;
+  margin-top: 17px;
+}
+
+.product-cards .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: #f5f6f8;
+  outline: 1px solid #e9e9e9;
+}
+
+.product-cards .swiper-pagination-bullet-active {
+  background: #eb8426;
+  outline: none;
+}
