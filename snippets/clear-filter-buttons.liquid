@@ -1,0 +1,36 @@
+{{ 'component-clear-filter-buttons.css' | asset_url | stylesheet_tag }}
+
+<div class="urls-to-remove-container js-urls-to-remove">
+  {% assign stopLoop = false %}
+  {% for item in collection.filters %}
+    {% if stopLoop %}
+      {% break %}
+    {% endif %}
+
+    {% if item.active_values.size > 0 %}
+      {% assign stopLoop = true -%}
+      <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="urls-to-remove-container__button"
+        >Clear all</a
+      >
+    {% endif %}
+  {% endfor %}
+
+  {%- for filter in collection.filters -%}
+    {%- if filter.type == 'price_range' -%}
+      {%- if filter.min_value.value != null or filter.max_value.value != null -%}
+        <a href="{{ filter.url_to_remove }}" class="urls-to-remove-container__button">
+          {%- assign min_value = filter.min_value.value | default: 0 -%}
+          {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
+          {{ min_value | money }} - {{ max_value | money }} X
+        </a>
+      {%- endif -%}
+
+    {%- else -%}
+      {%- for filter_value in filter.active_values -%}
+        <a href="{{ filter_value.url_to_remove }}" class="urls-to-remove-container__button">
+          {{ filter.label }}: {{ filter_value.label }} X
+        </a>
+      {%- endfor -%}
+    {%- endif %}
+  {%- endfor -%}
+</div>
