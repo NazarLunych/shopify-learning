@@ -4,8 +4,6 @@
 }
 
 .collection-cards__container {
-  max-width: 1320px;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 23px;

@@ -3,10 +3,6 @@
   padding: 24px;
 }
 
-.swiper {
-  max-width: 1320px;
-}
-
 .swiper .swiper-slide {
   height: auto;
 }

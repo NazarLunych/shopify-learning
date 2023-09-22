@@ -2,7 +2,7 @@
 
 {% if section.blocks.size > 0 %}
   <section class="collection-cards">
-    <div class="collection-cards__container">
+    <div class="collection-cards__container section-content">
       {% for block in section.blocks %}
         {% assign collection = block.settings.collection %}
         {% assign image = collection.featured_image %}
