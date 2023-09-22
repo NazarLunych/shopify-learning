@@ -1,0 +1,18 @@
+.urls-to-remove-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.urls-to-remove-container__button {
+  height: fit-content;
+  font-size: 10px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  white-space: nowrap;
+}

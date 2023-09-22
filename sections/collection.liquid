@@ -1,0 +1,96 @@
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-section page-width">
+  <p class="collection-section__products-count">Products: {{ collection.all_products_count }}</p>
+
+  <div class="collection-section__content">
+    {% if collection.filters.size > 0 %}
+      <aside class="collection-section__drawer js-form-drawer">
+        {% render 'filter-form', collection: collection %}
+      </aside>
+    {% endif %}
+
+    {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
+    {% if collection.products.size > 0 %}
+      <div class="collection-section__content-wrapper">
+        <div class="collection-section__topline">
+          <button class="collection-section__drawer-open-btn js-drawer-button">
+            {% render 'icon-filter' %}
+          </button>
+          <div class="collection-section__sort-wrapper">
+            {% render 'clear-filter-buttons' %}
+            <div class="collection-section__sort-by">
+              Sort by:
+              {% render 'sorting-form', collection: collection %}
+            </div>
+          </div>
+        </div>
+
+        {% paginate collection.products by section.settings.products_per_page_custom %}
+          <ul
+            id="product-grid-custom"
+            data-id="{{ section.id }}"
+            class="products-wrapper"
+          >
+            {%- for product in collection.products -%}
+              {% assign lazy_load = false %}
+              {%- if forloop.index > 2 -%}
+                {%- assign lazy_load = true -%}
+              {%- endif -%}
+
+              <li>
+                {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  image_shape: section.settings.image_shape,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  lazy_load: lazy_load,
+                  show_quick_add: section.settings.enable_quick_add,
+                  section_id: section.id
+                %}
+              </li>
+            {%- endfor -%}
+          </ul>
+
+          <div class="collection-section__paginate">
+            {% for paginate_parts in paginate.parts -%}
+              <a
+                href="{{paginate_parts.url}}"
+                class="collection-section__page {% if paginate_parts.is_link == false %}collection-section__page_active{% endif %}"
+              >
+                {{- paginate_parts.title -}}
+              </a>
+            {%- endfor %}
+          </div>
+        {% endpaginate %}
+      </div>
+    {% else %}
+      <p class="collection-section__empty-list">Empty list</p>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page_custom",
+      "step": 4,
+      "min": 4,
+      "max": 24,
+      "default": 4,
+      "label": "Products per page"
+    }
+  ],
+  "presets": [{ "name": "Collection" }]
+}
+{% endschema %}

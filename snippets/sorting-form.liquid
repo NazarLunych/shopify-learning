@@ -1,0 +1,15 @@
+<form class="sorting-form js-sorting-form">
+  <select>
+    {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+    {% for sort in collection.sort_options %}
+      <option
+        value="{{sort.value}}"
+        {% if sort.value == sort_by %}
+          selected="selected"
+        {% endif %}
+      >
+        {{ sort.name }}
+      </option>
+    {% endfor %}
+  </select>
+</form>

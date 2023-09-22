@@ -1,0 +1,134 @@
+.collection-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.collection-section__empty-list {
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.collection-section__products-count {
+  font-size: x-large;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.collection-section__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.collection-section__sort-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.collection-section__drawer-open-btn {
+  border: none;
+  display: none;
+  background-color: transparent;
+}
+
+.collection-section__drawer-open-btn svg {
+  max-width: 40px;
+  min-width: 30px;
+  width: 100%;
+}
+
+.collection-section__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.collection-section__topline {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.collection-section__sort-by {
+  white-space: nowrap;
+  display: flex;
+  gap: 10px;
+}
+
+.collection-section__sort-by select {
+  font-size: inherit;
+  color: currentColor;
+  border: none;
+  border-bottom: 2px solid currentColor;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.collection-section__paginate {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.collection-section__page {
+  text-decoration: none;
+  color: currentColor;
+  font-weight: lighter;
+}
+
+.collection-section__page_active {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 990px) {
+  .collection-section {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .products-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .collection-section__drawer {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    justify-content: flex-end;
+    background-color: rgba(var(--color-foreground), 0.5);
+    display: none;
+  }
+
+  .collection-section__sort-wrapper {
+    flex-direction: column;
+    width: auto;
+    gap: 10px;
+  }
+
+  .collection-section__drawer_active {
+    display: flex;
+  }
+
+  .collection-section__drawer-open-btn {
+    display: block;
+  }
+}
