@@ -1,161 +1,164 @@
 {
   "sections": {
-    "multicolumn": {
-      "type": "multicolumn",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "heading": "Image banner",
+            "heading_size": "h0"
           }
         },
-        "column2": {
-          "type": "column",
+        "text": {
+          "type": "text",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
           }
         },
-        "column3": {
-          "type": "column",
+        "button": {
+          "type": "buttons",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "heading",
+        "text",
+        "button"
       ],
-      "disabled": true,
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
-    "765acbb8-c09a-4caa-8e96-448f47f4dfa6": {
-      "type": "test-section-one",
+    "b01e9a37-9640-43c0-b264-0a211053cdb1": {
+      "type": "collection-cards",
       "blocks": {
-        "aa7d44b1-19e2-417c-89ee-38d061116d6e": {
+        "39a769ff-036f-46fa-af77-c66e5567692e": {
           "type": "collection_block",
           "settings": {
-            "collection": "clothing-shoes"
+            "collection": "clothing-shoes",
+            "url": "",
+            "title": ""
           }
         },
-        "33e77108-7562-4e1a-bb11-954da9d5039a": {
+        "5424d1a0-2aea-4d00-b574-bbce85247312": {
           "type": "collection_block",
           "settings": {
-            "collection": "home-living"
+            "collection": "home-living",
+            "url": "",
+            "title": ""
           }
         },
-        "e50603bb-71ad-415a-9055-e4eccf9fb7c6": {
+        "7be731be-0475-4756-b044-5899eba8040f": {
           "type": "collection_block",
           "settings": {
-            "collection": "art-collectibles"
+            "collection": "art-collectibles",
+            "url": "",
+            "title": ""
           }
         }
       },
       "block_order": [
-        "aa7d44b1-19e2-417c-89ee-38d061116d6e",
-        "33e77108-7562-4e1a-bb11-954da9d5039a",
-        "e50603bb-71ad-415a-9055-e4eccf9fb7c6"
+        "39a769ff-036f-46fa-af77-c66e5567692e",
+        "5424d1a0-2aea-4d00-b574-bbce85247312",
+        "7be731be-0475-4756-b044-5899eba8040f"
       ],
       "settings": {
         "text": ""
       }
     },
-    "9a68ef5a-56bf-426e-8488-b05579f5333f": {
-      "type": "test-section-two",
+    "5e0bc0b9-f002-49fa-9a6c-18323f239a80": {
+      "type": "product-cards",
       "blocks": {
-        "253576ed-6f60-4446-a463-a286bd55956f": {
+        "a7e9b0a1-dc09-4eb0-ba18-f3db502c3dc0": {
           "type": "products_block",
           "settings": {
-            "product": "test-1"
+            "product": "test-1",
+            "product_card_color": "#d3fbd9"
           }
         },
-        "d90f7fd6-6f3b-4ac3-87c7-e916b982df24": {
+        "097e2dac-9687-4382-93d3-ff0953f0070d": {
           "type": "products_block",
           "settings": {
-            "product": "test-2"
+            "product": "test-2",
+            "product_card_color": "#fbf5d3"
           }
         },
-        "d7f5453b-3fe8-4b28-a19a-5731968263e4": {
+        "43d63d5b-a99e-4ce8-b84b-266ed31f3e98": {
           "type": "products_block",
           "settings": {
-            "product": "test-3"
+            "product": "test-3",
+            "product_card_color": "#fbd3d3"
           }
         },
-        "6e706be5-b589-4095-a294-63d76dd1acab": {
+        "ef47f84f-9911-4412-9544-2966ab1ddda5": {
           "type": "products_block",
           "settings": {
-            "product": "test-4"
+            "product": "test-4",
+            "product_card_color": "#d3defb"
           }
         }
       },
       "block_order": [
-        "253576ed-6f60-4446-a463-a286bd55956f",
-        "d90f7fd6-6f3b-4ac3-87c7-e916b982df24",
-        "d7f5453b-3fe8-4b28-a19a-5731968263e4",
-        "6e706be5-b589-4095-a294-63d76dd1acab"
+        "a7e9b0a1-dc09-4eb0-ba18-f3db502c3dc0",
+        "097e2dac-9687-4382-93d3-ff0953f0070d",
+        "43d63d5b-a99e-4ce8-b84b-266ed31f3e98",
+        "ef47f84f-9911-4412-9544-2966ab1ddda5"
       ],
       "settings": {
       }
     },
-    "4f4cc2a3-5bf2-4a79-9083-5bcf6cf64566": {
-      "type": "test-section-three",
+    "8444bc1d-5e3f-4bd7-8df6-989a1837ce24": {
+      "type": "collection-tabs",
       "blocks": {
-        "bb5ad64a-7525-4262-9e07-db623edfd848": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "modern-farmhouse"
-          }
-        },
-        "ecbbfcf2-417a-42f8-a3a6-f57601c736b6": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "eclectic-decor"
-          }
-        },
-        "68550a74-5808-4c29-8e57-8f7ac46c8e7e": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "polka-boho-decor"
-          }
-        },
-        "f0fe5f1f-b962-4b99-b775-ffe643a62d18": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "minimalist-style"
-          }
-        },
-        "5029bebc-edad-4277-aa17-e3af5752f560": {
+        "2c5a937d-6b3b-4588-a0c2-ae20fc8e45cb": {
           "type": "collection_block",
           "settings": {
             "collection": "anniversary-gift"
           }
         },
-        "3791c96c-2b47-4b3a-9acd-a5af84d6a4b8": {
+        "2265349e-72b1-4a08-9bd8-f717781ab212": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "eclectic-decor"
+          }
+        },
+        "5e5a61c4-8ac5-4b6c-8aaf-9a52d0c41f82": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "minimalist-style"
+          }
+        },
+        "ccd10aa1-f6e1-4a7b-a8c0-c77719868213": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "modern-farmhouse"
+          }
+        },
+        "0a8bb7e0-bf7d-4125-8b8f-1d2fca777e8f": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "polka-boho-decor"
+          }
+        },
+        "59d7a67c-6ac1-4174-96bc-e85ebb8feb4c": {
           "type": "collection_block",
           "settings": {
             "collection": "wedding-gifts"
@@ -163,21 +166,21 @@
         }
       },
       "block_order": [
-        "bb5ad64a-7525-4262-9e07-db623edfd848",
-        "ecbbfcf2-417a-42f8-a3a6-f57601c736b6",
-        "68550a74-5808-4c29-8e57-8f7ac46c8e7e",
-        "f0fe5f1f-b962-4b99-b775-ffe643a62d18",
-        "5029bebc-edad-4277-aa17-e3af5752f560",
-        "3791c96c-2b47-4b3a-9acd-a5af84d6a4b8"
+        "2c5a937d-6b3b-4588-a0c2-ae20fc8e45cb",
+        "2265349e-72b1-4a08-9bd8-f717781ab212",
+        "5e5a61c4-8ac5-4b6c-8aaf-9a52d0c41f82",
+        "ccd10aa1-f6e1-4a7b-a8c0-c77719868213",
+        "0a8bb7e0-bf7d-4125-8b8f-1d2fca777e8f",
+        "59d7a67c-6ac1-4174-96bc-e85ebb8feb4c"
       ],
       "settings": {
       }
     }
   },
   "order": [
-    "multicolumn",
-    "765acbb8-c09a-4caa-8e96-448f47f4dfa6",
-    "9a68ef5a-56bf-426e-8488-b05579f5333f",
-    "4f4cc2a3-5bf2-4a79-9083-5bcf6cf64566"
+    "image_banner",
+    "b01e9a37-9640-43c0-b264-0a211053cdb1",
+    "5e0bc0b9-f002-49fa-9a6c-18323f239a80",
+    "8444bc1d-5e3f-4bd7-8df6-989a1837ce24"
   ]
 }
